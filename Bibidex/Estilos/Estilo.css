@@ -1,0 +1,109 @@
+:root {
+    --bg: #ffffff;               /* Variable Fondo blanco */
+    --text: #ffffff;             /* Variable Texto blanco */
+    --primary: #2563eb;          /* Variable azul principal */
+    --primary-contrast: #ffffff; /* Variable texto sobre azul */
+}
+
+* {
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Times, sans-serif;
+    line-height: 1.5;
+    background-color: var(--bg);
+    color: var(--text);
+
+    background-image: url("../Imagenes/Fondo.png"); /* Ruta de la imagen de fondo */
+    background-size: 30%; /* Ajusta el tamaño de la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: repeat; /* Repite la imagen de fondo para cubrir toda el área */
+}
+
+header {
+    display: flex;  /* Flex para alinear horizontalmente el encabezado */
+    justify-content: space-between; /* Espacio entre logo y navegación */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px; /* Espaciado horizontal grande para centrar el contenido */
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+
+main {
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: auto;
+    padding: 0 20px; /* Espaciado interno para el contenido */
+}
+
+section {
+    text-align: center;
+}
+
+#hero {
+    margin-top: 0px;
+    margin-bottom: 500px;
+    padding: 40px 20px;
+}
+
+#beneficios ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 0;
+    gap: 100px; /* Espaciado uniforme entre beneficios */
+}
+
+#beneficios li {
+    text-align: center;
+    width: 100%;
+    background: rgba(255,255,255,0.03); /* leve fondo para destacar */
+    padding: 20px 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #282727; /* Gris para el footer */
+}
+
+
+button {
+    background-color: var(--primary); /* color principal */
+    color: var(--primary-contrast);   /* contraste AA */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

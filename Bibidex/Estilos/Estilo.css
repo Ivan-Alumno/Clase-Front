@@ -86,14 +86,14 @@ section {
 /* TITULO */
 #hero {
     margin-top: -30px;
-    margin-bottom: 500px;
+    margin-bottom: 40px;
     padding: 20px 20px;
 }
 
 
 /* TARJETAS */
 #opciones {
-    margin-top: -500px;
+    margin-top: 40px;
     margin-bottom: 30px;
 
     display: grid;
@@ -141,7 +141,7 @@ section {
 
 /* Texto dentro de tarjeta */
 .texto_contenedor {
-    font-size: auto;
+    font-size: 1rem;
 }
 
 /* Hover texto */

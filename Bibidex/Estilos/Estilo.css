@@ -1,40 +1,53 @@
+/* 1. VARIABLES Y RESET*/
 :root {
-    --bg: #ffffff;               /* Variable Fondo blanco */
-    --text: #ffffff;             /* Variable Texto blanco */
-    --primary: #2563eb;          /* Variable azul principal */
-    --primary-contrast: #ffffff; /* Variable texto sobre azul */
-}
+    --bg: rgb(255, 255, 255, 0.100);
+    --text: rgb(255, 255, 255);
+    --primary: rgb(37, 99, 235);
+    --primary-contrast: rgb(0, 0, 0);
+} 
 
 * {
-    margin: 0px;
-    padding: 0px; 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
+}/*========================== */
 
+
+/* 2. BODY */
 body {
     font-family: Times, sans-serif;
     line-height: 1.5;
     background-color: var(--bg);
     color: var(--text);
 
-    background-image: url("../Imagenes/Fondo.png"); /* Ruta de la imagen de fondo */
-    background-size: 30%; /* Ajusta el tamaño de la imagen de fondo */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: repeat; /* Repite la imagen de fondo para cubrir toda el área */
-}
+    background-image: url("../Imagenes/Fondo.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}/*========================== */
 
+
+/* 3. CABECERA */
 header {
-    display: flex;  /* Flex para alinear horizontalmente el encabezado */
-    justify-content: space-between; /* Espacio entre logo y navegación */
-    align-items: center; /* Centrar verticalmente */
-    padding: 10px; /* Espaciado horizontal grande para centrar el contenido */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--bg);
+
+    border-radius: 20px;
+    border: 2px solid var(--primary-contrast);
+    backdrop-filter: blur(10px);
 }
 
 .logo img {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
 }
-
 
 nav ul {
     display: flex;
@@ -42,68 +55,156 @@ nav ul {
     gap: 20px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--text);
 }
 
 nav a:hover {
     color: var(--primary);
-}
+}/*========================== */
 
 
+/* 4. MAIN */
 main {
-    max-width: 1200px; /* Ancho máximo para el contenido */
-    margin: auto;
-    padding: 0 20px; /* Espaciado interno para el contenido */
+    text-align: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+
+    background: var(--bg);
+
+    border-radius: 20px;
+    border: 2px solid var(--primary-contrast);
 }
 
 section {
     text-align: center;
-}
+}/*========================== */
 
+
+/* TITULO */
 #hero {
-    margin-top: 0px;
+    margin-top: -30px;
     margin-bottom: 500px;
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
+
+/* TARJETAS */
+#opciones {
+    margin-top: -500px;
+    margin-bottom: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    padding: 20px;
+    background: var(--bg);
+
+    border-radius: 20px;
+    border: 2px solid var(--primary-contrast);
+    backdrop-filter: blur(10px);
+}
+
+/* Cuarta tarjeta */
+#opciones a:nth-child(4) {
+    grid-column: 2 / 3;
+}
+
+/* Ajustes de las tarjetas */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(40, 60, 115, 0.400);
+
+    border-radius: 20px;
+
+    box-shadow: 0 2px 8px rgba(57, 142, 195, 0.300);
+    padding: 20px;
+
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover de la tarjeta */
+.contenedor:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(57, 142, 195, 0.600);
+}
+
+/* Texto dentro de tarjeta */
+.texto_contenedor {
+    font-size: auto;
+}
+
+/* Hover texto */
+.contenedor:hover .texto_contenedor {
+    color: rgb(233, 178, 68);
+}
+
+/* Icono de la tarjeta */
+.icono img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}/*========================== */
+
+
+/* BENEFICIOS PRINCIPALES */
 #beneficios ul {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: stretch;
     list-style: none;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    padding: 0;
-    gap: 100px; /* Espaciado uniforme entre beneficios */
+    margin-top: auto;
+    margin-bottom: auto;
+    gap: 100px;
 }
 
 #beneficios li {
     text-align: center;
     width: 100%;
-    background: rgba(255,255,255,0.03); /* leve fondo para destacar */
+    background: var(--bg);
+    border-radius: 20px;
+    border: 2px solid var(--primary-contrast);
+    backdrop-filter: blur(10px);
+
     padding: 20px 10px;
-    border-radius: 12px;
+    border-radius: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+}/*========================== */
 
+/* 8. FOOTER (#contacto) */
 footer {
-    text-align: center;
-    margin-bottom: 10px;
+    max-width: 1000px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #282727; /* Gris para el footer */
-}
+    text-align: center;
+
+    background: var(--bg);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border: 2px solid var(--primary-contrast);
+}/*========================== */
 
 
+/* 9. ELEMENTOS GENERALES */
 button {
-    background-color: var(--primary); /* color principal */
-    color: var(--primary-contrast);   /* contraste AA */
+    background-color: var(--primary);
+    color: var(--primary-contrast);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-}
+}/*========================== */
